@@ -1,0 +1,6 @@
+def sentence(frase)
+    var = frase.split.sort_by{|word| word.downcase}
+   return var
+end
+
+sentence("Ruby is a fun language")
