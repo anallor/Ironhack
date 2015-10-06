@@ -1,0 +1,67 @@
+class ShoppingCart
+  attr_accessor(:items)
+
+  def initialize
+    @items = []
+  end
+
+  def add_item(item)
+    @items.push(item)
+  end
+
+  def checkout
+    total = @items.reduce(0) do |sum, item|
+      sum + item.price
+    end
+
+    if @items.size > 5
+      total * 0.9
+    else
+      total
+    end
+  end
+end
+
+class Item
+  attr_accessor(:price)
+
+  def initialize(name, price)
+    @name = name
+    @price = price
+  end
+end
+
+class Houseware < Item
+  def price
+    if @price > 100
+      return @price * 0.95
+    else
+      return @price
+    end
+  end
+end
+
+class Fruit < Item
+  def price
+    now = Time.now
+
+    if now.saturday? || now.sunday?
+      return @price * 0.9
+    else
+      return @price
+    end
+  end
+end
+
+joshs_cart = ShoppingCart.new
+banana = Fruit.new("Banana", 10)
+vaccuum = Houseware.new("Vaccuum", 150)
+oj = Item.new("Orange Juice", 10)
+rice = Item.new("Rice", 1)
+anchovies = Item.new("Anchovies", 2)
+
+joshs_cart.add_item(oj)
+joshs_cart.add_item(rice)
+joshs_cart.checkout
+
+puts "Your total today is $#{joshs_cart.checkout}. Have a nice day!"
