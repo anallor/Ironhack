@@ -1,0 +1,103 @@
+article {
+	width: 1000px;
+	height: 300px;
+	background-color: white;
+	    padding-top: 10px;
+    margin: auto;
+}
+
+#logo {
+	margin-left: 350px;
+	margin-top: 50px;
+}
+
+#caja {
+	
+	    background-color: white;
+    width: 600px;
+    height: 38px;
+    margin-top: 20px;
+    margin-left: 220px;
+    border: 1px;
+    border-color: #A29F9F;
+    border-bottom-style: inset;
+    border-top-style: outset;
+    border-right-style: inset;
+    border-left-style: outset;
+}
+
+
+#caja img {
+
+float: right;
+margin-top: 4px;
+
+}
+
+#botones {
+	width: 350px;
+	height: 150px;
+	background-color: white;
+	margin-left: 220px;
+	margin-top: 45px;
+}
+
+#botones img {
+
+	    
+    padding-left: 145px;
+    
+}
+    
+
+header {
+	text-align: right;
+    font-size: 14px;
+    font-family: Arial;
+    color: grey;
+    padding-top: 10px;
+}
+
+nav {
+	margin-right: 30px;
+}
+
+
+nav ul {
+	list-style: none;
+	text-align: right;
+}
+
+nav ul li {
+	display: inline;
+    list-style: none outside none;
+    padding-left: 5px;
+    padding-right: 25px;
+    width: auto;
+}
+
+
+footer {
+	 
+
+    width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	background-color: #E7E7F5;
+	font-family: Arial;
+	font-size: 13px;
+	color: grey;
+}
+
+footer ul {
+	list-style: none;
+	margin-left: 60px;
+}
+
+footer li {
+
+	display: inline-block;
+	padding-right: 40px;
+	
+
